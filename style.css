@@ -371,6 +371,9 @@ h3 {
   color: var(--muted);
   font-size: 14px;
 }
+.contact-bottom p span {
+  color: #a5775c;
+}
 footer {
   border-top: 1px solid var(--line);
   padding-top: 25px;
