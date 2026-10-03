@@ -794,13 +794,20 @@ html { scroll-padding-top: calc(var(--header-offset) + 20px); }
   .site-header, .site-header .header-inner, .site-header .wordmark { transition: none; }
 }
 
-/* Dark approximation for the cross-origin SoundCloud widget.
-   The filter affects the entire iframe, including artwork.
-   Parent-page CSS cannot selectively restyle the widget contents. */
-.soundcloud-player {
-  background: #e3e3e3;
-  filter: brightness(0.6);
+/* Dim the embedded player over black without CSS filters.
+   A 0.6 opacity over black gives the intended 60% brightness. */
+.soundcloud-shell {
+  background: #000;
   border-radius: 3px;
+  overflow: hidden;
+}
+.soundcloud-shell > .soundcloud-player {
+  display: block;
+  background: #fff;
+  -webkit-filter: none;
+  filter: none;
+  opacity: 0.6;
+  border-radius: 0;
 }
 
 /* Allow descriptive placement titles to fit beside the YouTube link. */
