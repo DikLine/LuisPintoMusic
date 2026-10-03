@@ -793,3 +793,17 @@ html { scroll-padding-top: calc(var(--header-offset) + 20px); }
 @media (prefers-reduced-motion: reduce) {
   .site-header, .site-header .header-inner, .site-header .wordmark { transition: none; }
 }
+
+/* Dark approximation for the cross-origin SoundCloud widget.
+   The filter affects the entire iframe, including artwork.
+   Parent-page CSS cannot selectively restyle the widget contents. */
+.soundcloud-player {
+  background: #e3e3e3;
+  filter: brightness(0.6);
+  border-radius: 3px;
+}
+
+/* Allow descriptive placement titles to fit beside the YouTube link. */
+.video-caption { align-items: flex-start; }
+.video-caption h4 { flex: 1 1 170px; min-width: 0; line-height: 1.5; }
+.video-caption a { flex-shrink: 0; }
