@@ -25,13 +25,14 @@
   <meta name="twitter:description" content="Composer, music producer, arranger, sound designer and sound engineer">
   <meta name="twitter:image" content="https://luispintomusic.com/images/og-image.jpg">
 
-  <link rel="stylesheet" href="style.css?v=20261003-sc-opacity">
+  <link rel="stylesheet" href="style.css?v=20261003-sc-dark">
   <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
   <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
   <link rel="shortcut icon" href="favicon/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="canonical" href="https://luispintomusic.com/">
   <script src="header.js" defer></script>
+  <script src="soundcloud-player.js?v=20261003-sc-dark" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -263,7 +264,53 @@ SOUND DESIGNER <span>•</span> SOUND ENGINEER</p>
         <h3>Music for Media</h3>
 <a class="text-link" href="https://soundcloud.com/luispinto-music/sets/production-music" target="_blank" rel="noopener noreferrer">Open in SoundCloud ↗</a>
       </div>
-<div class="soundcloud-shell">
+<div class="soundcloud-shell" data-sc-player>
+  <div class="sc-interface" role="region" aria-label="Music for Media audio player" hidden>
+    <div class="sc-now-playing">
+      <a class="sc-cover" data-sc-track-link href="https://soundcloud.com/luispinto-music/sets/production-music" target="_blank" rel="noopener noreferrer" aria-label="Open current track on SoundCloud">
+        <span class="sc-cover-placeholder" aria-hidden="true">♪</span>
+        <img class="sc-cover-image" alt="" width="160" height="160" hidden>
+      </a>
+      <div class="sc-current">
+        <div class="sc-track-heading">
+          <div class="sc-track-info">
+            <a class="sc-artist" href="https://soundcloud.com/luispinto-music" target="_blank" rel="noopener noreferrer">Luis Santiago Pinto</a>
+            <h4 class="sc-title"><a data-sc-track-link href="https://soundcloud.com/luispinto-music/sets/production-music" target="_blank" rel="noopener noreferrer">Music for Media</a></h4>
+          </div>
+          <a class="sc-source" href="https://soundcloud.com/luispinto-music/sets/production-music" target="_blank" rel="noopener noreferrer">SoundCloud ↗</a>
+        </div>
+        <div class="sc-controls">
+          <button class="sc-button sc-previous" type="button" aria-label="Previous track" title="Previous track">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5v14M18 5 8 12l10 7Z"/></svg>
+          </button>
+          <button class="sc-button sc-play" type="button" aria-label="Play" title="Play">
+            <svg class="sc-play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7-11 7Z"/></svg>
+            <svg class="sc-pause-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>
+          </button>
+          <button class="sc-button sc-next" type="button" aria-label="Next track" title="Next track">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 5v14M6 5l10 7-10 7Z"/></svg>
+          </button>
+          <label class="sc-volume">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m11 5-6 4H2v6h3l6 4ZM15 8a6 6 0 0 1 0 8M18 5a10 10 0 0 1 0 14"/></svg>
+            <span class="sc-sr-only">Volume</span>
+            <input class="sc-volume-input" type="range" min="0" max="100" value="100">
+          </label>
+        </div>
+        <div class="sc-timeline">
+          <div class="sc-waveform" aria-hidden="true" hidden></div>
+          <input class="sc-seek" type="range" min="0" max="1" step="1" value="0" aria-label="Playback position" aria-valuetext="0:00" disabled>
+          <div class="sc-times" aria-hidden="true"><span class="sc-elapsed">0:00</span><span class="sc-duration">–:––</span></div>
+        </div>
+      </div>
+    </div>
+    <ol class="sc-track-list" aria-label="Playlist tracks"></ol>
+    <div class="sc-player-footer">
+      <span class="sc-track-count">Production Music</span>
+      <button class="sc-native-toggle" type="button">Use SoundCloud player</button>
+    </div>
+    <p class="sc-status sc-sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+  </div>
+  <p class="sc-fallback-note" hidden><span></span> <button class="sc-custom-toggle" type="button" hidden>Back to dark player</button></p>
   <iframe class="soundcloud-player" title="Luis Pinto — Production Music playlist on SoundCloud" width="100%" height="450" scrolling="no" allow="autoplay" loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fluispinto-music%2Fsets%2Fproduction-music&amp;color=%23cf8c68&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
 </div>
       <div class="placements-heading">
