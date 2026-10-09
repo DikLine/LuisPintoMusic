@@ -699,6 +699,8 @@ footer span:nth-child(2) {
 .hero-bottom .hero-roles { font-size: 14px; line-height: 1.8; }
 .hero-portrait { align-self: center; min-height: 0; aspect-ratio: 1; }
 .hero-portrait img { max-height: none; }
+.hero-portrait picture { display: block; width: 100%; height: 100%; }
+.wordmark picture { display: block; }
 .section { padding-top: 88px; padding-bottom: 88px; }
 .facts b { display: block; font-size: 16px; }
 .stage-intro { max-width: 65ch; color: var(--muted); }
@@ -715,6 +717,14 @@ footer span:nth-child(2) {
 .tools p { font-size: 21px; }
 .tools .secondary { max-width: 75ch; line-height: 1.8; }
 .video-card iframe { height: auto; aspect-ratio: 16 / 9; }
+.video-embed { position: relative; aspect-ratio: 16 / 9; background: #171b19; }
+.video-preview { position: absolute; inset: 0; display: block; overflow: hidden; }
+.video-preview img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.video-play-icon { position: absolute; inset: 0; display: grid; place-items: center; color: #252525; }
+.video-play-icon svg { width: 68px; height: 48px; filter: drop-shadow(0 2px 5px rgba(0,0,0,.4)); }
+.video-preview:hover .video-play-icon, .video-preview:focus-visible .video-play-icon { color: #c00; }
+.video-preview:focus-visible { outline-offset: -3px; }
+.video-embed iframe { position: absolute; inset: 0; height: 100%; }
 .video-caption { flex-wrap: wrap; }
 .video-caption a { font-size: 14px; }
 footer { align-items: center; }
@@ -800,7 +810,11 @@ html { scroll-padding-top: calc(var(--header-offset) + 20px); }
   background: #000;
   border-radius: 3px;
   overflow: hidden;
+  min-height: 450px;
 }
+.soundcloud-shell > .soundcloud-player[data-src]:not([src]) { display: none; }
+.soundcloud-shell noscript .soundcloud-player { display: block; opacity: 0.6; }
+@media (max-width: 600px) { .soundcloud-shell { min-height: 420px; } }
 .soundcloud-shell > .soundcloud-player {
   display: block;
   background: #fff;

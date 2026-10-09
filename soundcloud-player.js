@@ -499,7 +499,12 @@
       play.focus();
     });
 
+    // Keep the remote audio engine out of the initial page load. The observer
+    // starts it only when the listener is approaching this section.
     iframe.loading = 'eager';
+    if (!iframe.getAttribute('src') && iframe.dataset.src) {
+      iframe.src = iframe.dataset.src;
+    }
     loadAPI().then(Widget => {
       if (failed) return;
       widget = Widget(iframe);
@@ -553,7 +558,7 @@
         observer.unobserve(entry.target);
         initialise(entry.target);
       });
-    }, { rootMargin: '600px' });
+    }, { rootMargin: '200px' });
     roots.forEach(root => observer.observe(root));
   } else roots.forEach(initialise);
 })();
