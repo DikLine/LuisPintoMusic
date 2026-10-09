@@ -160,8 +160,8 @@ h2 {
 }
 .credits article {
   display: grid;
-  grid-template-columns: 0.45fr 1.2fr 1.4fr;
-  gap: 25px;
+  grid-template-columns: 56px 90px minmax(0, 1.1fr) minmax(0, 1.4fr);
+  gap: 32px;
   border-top: 1px solid var(--line);
   padding: 29px 0;
 }
@@ -447,14 +447,7 @@ footer span:nth-child(2) {
   .section-top > p {
     margin-bottom: 26px;
   }
-  .credits article {
-    grid-template-columns: 48px 1fr;
-    gap: 8px 16px;
-    padding: 23px 0;
-  }
-  .credit-detail {
-    grid-column: 2;
-  }
+  .credits article { padding: 23px 0; }
   .credits h3 {
     font-size: 24px;
   }
@@ -745,7 +738,6 @@ footer span:nth-child(2) { flex: 1 1 400px; font-size: 12px; }
 @media (max-width: 550px) {
 
 
-  .credits article { grid-template-columns: 42px minmax(0,1fr); }
   .hero-words h1 { font-size: clamp(2.45rem, 9.5vw, 3.4rem); }
   .alias { font-size: clamp(2.5rem, 12vw, 3.625rem); letter-spacing: -0.04em; }
   .text-link { gap: 16px; }
@@ -935,3 +927,20 @@ html { scroll-padding-top: calc(var(--header-offset) + 20px); }
 .video-caption { align-items: flex-start; }
 .video-caption h4 { flex: 1 1 170px; min-width: 0; line-height: 1.5; }
 .video-caption a { flex-shrink: 0; }
+
+/* Album covers: fixed square space keeps delayed images from moving the rows. */
+.album-cover { display: block; width: 90px; height: 90px; }
+.album-cover img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.album-cover:focus-visible { outline-offset: 4px; }
+.credit-title h3 { overflow-wrap: anywhere; }
+@media (max-width: 900px) {
+  .credits article { grid-template-columns: 40px 76px minmax(0, 1fr); gap: 12px 24px; }
+  .album-cover { width: 76px; height: 76px; }
+  .credits .credit-detail { grid-column: 3; max-width: 100%; }
+}
+@media (max-width: 550px) {
+  .credits article { grid-template-columns: 36px 64px minmax(0, 1fr); gap: 14px 12px; }
+  .album-cover { width: 64px; height: 64px; }
+  .credits .credit-detail { grid-column: 2 / -1; }
+  .credits h3 { font-size: 20px; line-height: 1.3; }
+}
