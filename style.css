@@ -939,8 +939,8 @@ html { scroll-padding-top: calc(var(--header-offset) + 20px); }
   .credits .credit-detail { grid-column: 3; max-width: 100%; }
 }
 @media (max-width: 550px) {
-  .credits article { grid-template-columns: 32px 90px minmax(0, 1fr); gap: 14px 10px; }
-  .album-cover { width: 90px; height: 90px; }
+  .credits article { grid-template-columns: 32px 80px minmax(0, 1fr); gap: 14px 10px; }
+  .album-cover { width: 80px; height: 80px; }
   .credits .credit-detail { grid-column: 2 / -1; }
   .credits h3 { font-size: 20px; line-height: 1.3; }
 }
