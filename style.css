@@ -947,7 +947,7 @@ html { scroll-padding-top: calc(var(--header-offset) + 20px); }
 
 /* On very narrow phones, move the year above to leave room for the title. */
 @media (max-width: 359px) {
-  .credits article { grid-template-columns: 90px minmax(0, 1fr); gap: 12px; }
+  .credits article { grid-template-columns: 80px minmax(0, 1fr); gap: 12px; }
   .credits .year { grid-column: 1 / -1; padding-top: 0; }
   .credits .credit-detail { grid-column: 1 / -1; }
 }
