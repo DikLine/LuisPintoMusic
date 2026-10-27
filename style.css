@@ -326,6 +326,13 @@ h3 {
   align-items: center;
   margin-top: 35px;
 }
+.contact-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
 .contact-bottom p {
   color: var(--muted);
   font-size: 14px;
